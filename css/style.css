@@ -83,6 +83,7 @@ a:hover {
 
 .bottom{
     display: flex;
+    justify-content: stretch;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
@@ -101,6 +102,11 @@ a:hover {
     padding: 5px;
     text-align: center;
   }
+
+.ordered-list{
+    background-color:#eeeeee;
+    padding: 40px;
+}
 h2 {
     margin: 0px;
     font-size: xx-large;
@@ -115,3 +121,19 @@ h3 {
     background-color:#eeeeee;
     padding: 10px;
 }
+
+table {
+    width: 100%;
+    border: 2px  black;
+    text-align: center;
+    padding: 8px;
+      }
+ tr,
+ td {
+    border: 2px solid black;
+ }
+
+ .references {
+    text-align: center;
+ }
+
