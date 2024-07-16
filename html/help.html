@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="body-help">
+    <nav id="header">
+        <ul class="left-links">
+            <li><a href="./index.html">Home</a></li>
+        </ul>
+        <ul class="center-links">
+            <li><a href="./anchorage.html">Anchorage</a></li>
+            <li><a href="./juneau.html">Juneau</a></li>
+            <li><a href="./homer.html">Homer</a></li>
+        </ul>
+        <ul class="right-links">
+            <li><a href="./help.html">Help</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <div class="help-top">
+            <h3>Please fill out the fields below to reach our support team.</h3>
+        </div>
+        <form id="support-form" onsubmit="return validateEmails();">
+            <div class="middle">
+                <ol class="user-info">
+                    <li>
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </li>
+                    <li>
+                        <label for="confirm-email">Confirm Email:</label>
+                        <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm your email address" required>
+                    </li>
+                </ol>
+            </div>
+            <div class="help-bottom">
+                <h3>How can we help you?</h3>
+                <textarea id="message" name="message" placeholder="Enter your message here." rows="10" cols="50" required></textarea>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        function validateEmails() {
+            // Get email and confirm-email values
+            var email = document.getElementById('email').value;
+            var confirmEmail = document.getElementById('confirm-email').value;
+
+            // Check if the email and confirm-email values match
+            if (email !== confirmEmail) {
+                // Show an alert message if emails do not match
+                alert('Email addresses do not match.');
+                // Prevent form submission
+                return false;
+            }
+
+            // Allow form submission if emails match
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -137,3 +137,44 @@ table {
     text-align: center;
  }
 
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#first-name,
+#last-name,
+#email,
+#confirm-email {
+    width: 300px;
+}
+
+#message {
+    width: 600px;
+    height: 400px;
+    text-align: left;
+    line-height: 1.5;
+    margin: 30px;
+    overflow-wrap: break-word;
+}
+
+.help-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.help-top {
+    padding-top: 100px;
+}
+.body-help {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Copperplate, Papyrus;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
