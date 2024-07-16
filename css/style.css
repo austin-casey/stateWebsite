@@ -3,8 +3,8 @@
 body {
   height: 100vh;
   margin: 0;
-  overflow: hidden;
-  font-family: Copperplate, Papyrus;
+  overflow: auto;
+  font-family: Copperplate, Papyrus, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -78,7 +78,7 @@ a:hover {
     align-items: center;
 }
 .middle {
-    margin: 50px;
+    margin: 30px;
 }
 
 .bottom{
@@ -104,8 +104,10 @@ a:hover {
   }
 
 .ordered-list{
-    background-color:#eeeeee;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color:aliceblue;
+    padding: 20px;
 }
 h2 {
     margin: 0px;
@@ -114,12 +116,16 @@ h2 {
 
 h3 {
     margin: 0px;
+    text-align: center;
 }
 .footer { 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color:#eeeeee;
-    padding: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 table {
@@ -131,10 +137,6 @@ table {
  tr,
  td {
     border: 2px solid black;
- }
-
- .references {
-    text-align: center;
  }
 
 .user-info {
@@ -163,6 +165,7 @@ table {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 300px;
 
 }
 
@@ -176,5 +179,19 @@ table {
     font-family: Copperplate, Papyrus;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+}
+
+.attractions {
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+table {
+    width: 969px;
+}
+
+.references {
+    padding-left: 50px;
+    padding-right: 50px;
+    align-content: center;
 }

@@ -25,7 +25,7 @@
         <div class="help-top">
             <h3>Please fill out the fields below to reach our support team.</h3>
         </div>
-        <form id="support-form" onsubmit="return validateEmails();">
+        <div id="support-form">
             <div class="middle">
                 <ol class="user-info">
                     <li>
@@ -43,34 +43,55 @@
                     <li>
                         <label for="confirm-email">Confirm Email:</label>
                         <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm your email address" required>
+                        <span id="error-message" style="color: red; display: none;">Emails do not match</span>
                     </li>
                 </ol>
             </div>
-            <div class="help-bottom">
+            <section class="help-bottom">
                 <h3>How can we help you?</h3>
                 <textarea id="message" name="message" placeholder="Enter your message here." rows="10" cols="50" required></textarea>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+                <button id="submit-button" type="button">Submit</button>
+            </section>
+        </div>
     </section>
 
     <script>
-        function validateEmails() {
-            // Get email and confirm-email values
-            var email = document.getElementById('email').value;
-            var confirmEmail = document.getElementById('confirm-email').value;
+        function checkEmails() {
+            const email = document.getElementById('email').value;
+            const confirmEmail = document.getElementById('confirm-email').value;
+            const errorMessage = document.getElementById('error-message');
 
-            // Check if the email and confirm-email values match
-            if (email !== confirmEmail) {
-                // Show an alert message if emails do not match
-                alert('Email addresses do not match.');
-                // Prevent form submission
-                return false;
+            if (email === confirmEmail) {
+                errorMessage.style.display = 'none';
+            } else if (email === "" || confirmEmail === "") {
+                errorMessage.style.display = 'none';
+            } else {
+                errorMessage.style.display = 'inline';
             }
-
-            // Allow form submission if emails match
-            return true;
         }
+
+        document.getElementById('email').addEventListener('input', checkEmails);
+        document.getElementById('confirm-email').addEventListener('input', checkEmails);
+
+        document.getElementById('submit-button').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            const confirmEmail = document.getElementById('confirm-email').value;
+
+            if (email !== confirmEmail) {
+                alert('Email addresses do not match.');
+            } else {
+                alert("This isn't a real form. Nothing has been submitted.");
+            }
+        }); 
     </script>
+
+    <div class="footer">
+        <div class="left-footer">
+            WGU D277 - Front-End Web Development
+        </div>
+        <div class="right-footer">
+            Austin Casey, 2024
+        </div>
+    </div>
 </body>
 </html>
