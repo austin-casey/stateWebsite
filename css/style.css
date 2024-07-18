@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   height: 100vh;
@@ -119,15 +119,22 @@ h3 {
     text-align: center;
 }
 .footer { 
-    display: flex;
-    justify-content: space-between;
-    background-color:#eeeeee;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color:#eeeeee; 
+    position: relative;
+    height: 35px;
 }
 
+.right-footer {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+}
+
+.left-footer {
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+}
 table {
     width: 100%;
     border: 2px  black;
