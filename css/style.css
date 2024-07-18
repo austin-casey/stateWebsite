@@ -172,7 +172,7 @@ table {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 300px;
+    /* padding-bottom: 300px; */
 
 }
 
@@ -182,7 +182,7 @@ table {
 .body-help {
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
     font-family: Copperplate, Papyrus;
     display: flex;
     flex-direction: column;
@@ -201,4 +201,24 @@ table {
     padding-left: 50px;
     padding-right: 50px;
     align-content: center;
+}
+
+.floated-container {
+    display: block;
+    padding-left: 350px;
+    padding-right: 350px;
+    text-align: center;
+    line-height: 90px;
+    
+}
+
+.floated-container img {
+    height: 100px;
+    width: auto;
+    float: left;
+}
+
+#submit-button {
+    background-color: blue;
+    color: white;
 }
