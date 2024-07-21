@@ -120,8 +120,7 @@ h3 {
 }
 .footer { 
     background-color:#eeeeee; 
-    position: relative;
-    height: 35px;
+    height: 50px;
 }
 
 .right-footer {
@@ -131,9 +130,9 @@ h3 {
 }
 
 .left-footer {
-    position: absolute;
+    position: relative;
     left: 50px;
-    bottom: 10px;
+    top: 10px;
 }
 table {
     width: 100%;
